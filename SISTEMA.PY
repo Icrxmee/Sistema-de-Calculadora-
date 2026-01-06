@@ -18,6 +18,11 @@ InterfaceCalculos(a, b, "/", div(a, b))
 
 menuFatorial()
 sleep(1)
-
 InterfaceFatorail()
+
+menuMedia()
+sleep(1)
+
+
+encerramento()
 

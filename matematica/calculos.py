@@ -36,4 +36,12 @@ def fatorial(a):
     
     return c
 
+def media(a):
+
+    if len(a) == 0:
+        return 0
+    
+    return sum(a) / len(a)
+
+
 
