@@ -5,24 +5,27 @@ from time import sleep
 menuPrincipal()
 sleep(1)
 
-a = float (input("Digite o 1° valor: "))
-sleep(0.5)
+while True:
 
-b = float (input("Digite o 2° valor:"))
-sleep(0.5)
+    opcao = menuOpcoes()
 
-InterfaceCalculos(a, b, "+", soma(a,b))
-InterfaceCalculos(a, b, "-", sub (a, b))
-InterfaceCalculos(a, b, "*", multi (a, b))
-InterfaceCalculos(a, b, "/", div(a, b))
+    if opcao == "1":
+      interfaceOperações()
 
-menuFatorial()
-sleep(1)
-InterfaceFatorail()
+    if opcao == "2":
+      menuFatorial()
+      sleep(0.5)
+      InterfaceFatorail()
+    
+    if opcao == "3":
+       menuMedia()
+       sleep(0.5)
+       interfaceMedia()
 
-menuMedia()
-sleep(1)
+    if opcao == "0":
+       encerramento()
+       break       
 
-
-encerramento()
-
+    if opcao not in "0123":
+       print("ERRO: Digite uma opção válida!!!")
+       sleep(1)

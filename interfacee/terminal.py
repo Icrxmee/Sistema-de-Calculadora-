@@ -3,7 +3,7 @@ from time import sleep
 
 def encerramento():
   linha()
-  print("Muito Obrigado por Utilizar Nosso Sistema!!!")
+  print("Muito Obrigado por utilizar nosso sistema!!!")
   linha()
 
 def linha():
@@ -16,6 +16,19 @@ def menuPrincipal():
   print ("Sistema de Calculadora".center(40))
   linha()
 
+def menuOpcoes():
+
+  linha()
+  print("1 - Operações Básicas")
+  print("2 - Fatorial")
+  print("3 - Média")
+  print("0 - Sair")
+  linha()
+
+  opçao = input("Escolha uma opção: ").strip()
+  return opçao
+
+
 def menuFatorial():
   
   linha()
@@ -24,7 +37,7 @@ def menuFatorial():
 
 def menuMedia():
   linha()
-  print("Cálculo de Média")
+  print("Cálculo de Média".center(40))
   linha()
 
 def InterfaceCalculos(a, b, c, d):
@@ -38,37 +51,33 @@ def InterfaceCalculos(a, b, c, d):
    
     print(f" {a} {c} {b} = {d} ")
 
+def interfaceOperações():
+
+  try:
+
+      a = float (input("Digite o 1° valor: "))
+      sleep(0.5)
+
+      b = float (input("Digite o 2° valor: "))
+      sleep(0.5)
+
+      InterfaceCalculos(a, b, "+", soma(a,b))
+      InterfaceCalculos(a, b, "-", sub (a, b))
+      InterfaceCalculos(a, b, "*", multi (a, b))
+      InterfaceCalculos(a, b, "/", div(a, b))
+  
+  except ValueError:
+    print(" ERRO: Digite apenas números")
+
 def InterfaceFatorail():
 
-  while True:
+  c = int(input("Digite um valor: "))
+  sleep(0.5)
 
-    c = str (input("Deseja calcular o fatorial de um número [S/N]: ")).strip().upper()
-    sleep(0.5)
+  print(f"O fatorial do valor {c} será: ", end=" ")
+  print(fatorial(c))
+  sleep(1)
 
-    if c and c [0] == "S":
-
-      try: 
-
-        d = int(input("Digite um valor: "))
-        linha()
-        sleep(1)
-
-        print(f"O fatorial de {d} será: {fatorial(d)}")
-      
-      except ValueError:
-
-        print("ERRO: Digite um número inteiro")
-
-        break
-    
-    elif c and c [0] == "N":
-
-      print()
-      break
-    
-    else:
-
-      print("ERRO: Digite S ou N")
 
 def interfaceMedia():
 
@@ -76,7 +85,8 @@ def interfaceMedia():
 
   while True:
 
-    numeros = input("Digite um número (ou N para parar)").strip().upper()
+    print("* Para parar escreva N *")
+    numeros = input("Digite um número: ").strip().upper()
 
     if numeros == "N":
       break

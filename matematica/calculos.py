@@ -16,7 +16,6 @@ def multi (a, b):
 
     return c
 
-
 def div (a, b):
 
     if b == 0:
