@@ -10,6 +10,8 @@ while True:
     opcao = menuOpcoes()
 
     if opcao == "1":
+      menuOperacoesBasicas()
+      sleep(0.5)
       interfaceOperações()
 
     if opcao == "2":

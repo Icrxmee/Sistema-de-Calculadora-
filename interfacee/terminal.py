@@ -28,6 +28,11 @@ def menuOpcoes():
   opçao = input("Escolha uma opção: ").strip()
   return opçao
 
+def menuOperacoesBasicas():
+
+  linha()
+  print("Realizando Operações Básicas".center(40))
+  linha()
 
 def menuFatorial():
   
@@ -82,10 +87,10 @@ def InterfaceFatorail():
 def interfaceMedia():
 
   valores = []
+  print("* Para parar escreva N *")
 
   while True:
 
-    print("* Para parar escreva N *")
     numeros = input("Digite um número: ").strip().upper()
 
     if numeros == "N":

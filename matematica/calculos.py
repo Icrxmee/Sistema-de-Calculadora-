@@ -1,19 +1,13 @@
 def soma (a, b):
-
     c = a + b
-
     return c
 
 def sub (a, b):
-
     c = a - b
-
     return c
 
 def multi (a, b):
-
     c = a * b
-
     return c
 
 def div (a, b):
@@ -41,6 +35,3 @@ def media(a):
         return 0
     
     return sum(a) / len(a)
-
-
-
